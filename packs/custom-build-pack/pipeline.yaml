@@ -24,6 +24,7 @@ pipelines:
     build:
       preSteps:
       - sh: echo “Running unit tests!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!”
+        name: container-build
       steps:
       - sh: export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml
         name: container-build
